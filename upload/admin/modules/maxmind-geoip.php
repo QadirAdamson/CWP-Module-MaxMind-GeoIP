@@ -152,27 +152,6 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     background: #1b5fc0 !important;
     color: #ffffff !important;
 }
-.nav-tab-link {
-    padding: 10px 18px;
-    display: block;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
-    font-weight: bold;
-    cursor: pointer;
-}
-.nav-tab-link.active {
-    background: #2f80ed !important;
-    color: #fff !important;
-}
-.nav-tab-link.active i {
-    color: #ffffff !important;
-}
-.nav-tab-link.inactive {
-    background: #f8f9fa !important;
-    color: #333 !important;
-    border: 1px solid #ddd !important;
-    border-bottom: none !important;
-}
 </style>
 
 <div class="row" style="margin-bottom:20px;">
@@ -196,23 +175,25 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     </div>
 </div>
 
-<ul class="nav nav-tabs" style="margin-bottom:20px; border-bottom:2px solid #ddd; display:flex; list-style:none; padding:0;">
-    <li style="margin-right:8px;">
-        <a id="tab-btn-single" class="nav-tab-link active" onclick="showTab('single')">
-            <i class="icon16 icomoon-icon-earth"></i> Single IP Lookup
-        </a>
-    </li>
-    <li style="margin-right:8px;">
-        <a id="tab-btn-bulk" class="nav-tab-link inactive" onclick="showTab('bulk')">
-            <i class="icon16 icomoon-icon-list"></i> Bulk IP Lookup
-        </a>
-    </li>
-    <li style="margin-right:8px;">
-        <a id="tab-btn-docs" class="nav-tab-link inactive" onclick="showTab('docs')">
-            <i class="icon16 icomoon-icon-file"></i> Documentation
-        </a>
-    </li>
-</ul>
+<div class="tabs" style="margin-bottom:20px;">
+    <ul class="nav nav-tabs">
+        <li id="tab-li-single" class="active">
+            <a id="tab-btn-single" onclick="showTab('single')" style="cursor:pointer;">
+                <i class="icon16 icomoon-icon-earth"></i> Single IP Lookup
+            </a>
+        </li>
+        <li id="tab-li-bulk">
+            <a id="tab-btn-bulk" onclick="showTab('bulk')" style="cursor:pointer;">
+                <i class="icon16 icomoon-icon-list"></i> Bulk IP Lookup
+            </a>
+        </li>
+        <li id="tab-li-docs">
+            <a id="tab-btn-docs" onclick="showTab('docs')" style="cursor:pointer;">
+                <i class="icon16 icomoon-icon-file"></i> Documentation
+            </a>
+        </li>
+    </ul>
+</div>
 
 <div class="tab-content-area" id="tab-single">
     <div class="pdns-card">
@@ -379,10 +360,10 @@ function getAjaxUrl() {
 
 function showTab(tabId) {
     $('.tab-content-area').hide();
-    $('.nav-tab-link').removeClass('active').addClass('inactive');
+    $('.tabs .nav-tabs li').removeClass('active');
     
     $('#tab-' + tabId).fadeIn(150);
-    $('#tab-btn-' + tabId).removeClass('inactive').addClass('active');
+    $('#tab-li-' + tabId).addClass('active');
 }
 
 function lookupClientIP(ip) {
