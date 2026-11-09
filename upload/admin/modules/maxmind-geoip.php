@@ -360,16 +360,8 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
 
         <pre style="background:#1e293b; color:#e2e8f0; padding:18px; border-radius:6px; font-family:monospace; font-size:13px; line-height:1.6; overflow-x:auto;">&lt;?php
 require_once '/usr/share/MaxMindGeoIP/maxmind_geoip.php';
-
 $geoip = maxmind_geoip('8.8.8.8');
-
-echo "IP:           " . $geoip['ip'] . "\n";
-echo "Country:      " . $geoip['country_name'] . " (" . $geoip['country_code'] . ")\n";
-echo "City:         " . $geoip['city'] . "\n";
-echo "Postal:       " . $geoip['postal'] . "\n";
-echo "Coordinates:  " . $geoip['latitude'] . ", " . $geoip['longitude'] . "\n";
-echo "Timezone:     " . $geoip['timezone'] . "\n";
-echo "ASN / ISP:    " . $geoip['asn'] . " - " . $geoip['org'] . "\n";
+// print_r($geoip);
 ?&gt;</pre>
     </div>
 </div>

@@ -34,12 +34,8 @@ Any PHP application or site hosted on the server can query geolocation locally:
 ```php
 <?php
 require_once '/usr/share/MaxMindGeoIP/maxmind_geoip.php';
-
 $geoip = maxmind_geoip('8.8.8.8');
-
-echo "Country: " . $geoip['country_name'] . " (" . $geoip['country_code'] . ")\n";
-echo "City:    " . $geoip['city'] . "\n";
-echo "ASN:     " . $geoip['asn'] . " " . $geoip['org'] . "\n";
+// print_r($geoip);
 ```
 
 ---
