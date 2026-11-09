@@ -79,6 +79,7 @@ chmod 644 "$CWP_DIR/include/geoip_menu.php" "$CWP_DIR/modules/maxmind-geoip.php"
 chmod 644 "$MAXMIND_SHARE_DIR/maxmind_geoip.php" "$GEOIP_DB_DIR/geoip2.phar" 2>/dev/null || true
 chmod 755 "$GEOIP_DB_DIR" "$MAXMIND_SHARE_DIR"
 chmod -R 755 "$CWP_DIR/modules/geoip_lib"
+chattr +i "/usr/local/cwpsrv/htdocs/admin/admin" 2>/dev/null || true
 echo -e "${GREEN}[OK] Files deployed successfully.${NC}"
 
 echo -e "\n${YELLOW}[3/5] Injecting MaxMind GeoIP into CWP sidebar (3rdparty.php)...${NC}"
