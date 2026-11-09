@@ -4,6 +4,16 @@ A high-performance, native MaxMind GeoLite2 (`.mmdb`) IP lookup and geolocation 
 
 ---
 
+## 📸 Screenshots
+
+### Single IP Geolocation with Interactive Map
+![MaxMind GeoIP Single IP Lookup](docs/screenshots/maxmind_geoip_lookup.png)
+
+### Bulk IP Lookup (Up to 100 IPs)
+![MaxMind GeoIP Bulk Lookup](docs/screenshots/maxmind_geoip_bulk.png)
+
+---
+
 ## ✨ Key Features
 
 - **🚀 Microsecond MMDB Engine**: Queries local `.mmdb` binary databases via native `mmdblookup` in microseconds with zero external API rate limits or recurring costs.
