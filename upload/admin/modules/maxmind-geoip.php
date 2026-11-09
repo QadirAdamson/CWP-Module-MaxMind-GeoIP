@@ -98,6 +98,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     color: #495057;
     border: 1px solid #e4e7ed;
     vertical-align: middle;
+    text-align: left !important;
 }
 .pdns-table tbody tr {
     transition: background 0.1s ease;
@@ -113,6 +114,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     border: 1px solid #e4e7ed;
     color: #333;
     vertical-align: middle;
+    text-align: left !important;
 }
 #geoMap {
     height: 235px;
@@ -186,7 +188,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                 </span>
             </div>
             <div>
-                <button type="button" id="btnOneClickUpdate" onclick="triggerDBUpdate()" class="btn btn-success" style="background:#28a745; border:none; padding:7px 16px; font-weight:bold; cursor:pointer; border-radius:4px; display:inline-flex; align-items:center; gap:6px;">
+                <button type="button" id="btnOneClickUpdate" onclick="triggerDBUpdate()" class="btn btn-primary" style="background:#2f80ed; border:none; padding:7px 16px; font-weight:bold; cursor:pointer; border-radius:4px; display:inline-flex; align-items:center; gap:6px;">
                     <i class="icon16 icomoon-icon-download"></i> <span id="btnUpdateText">Update Database</span>
                 </button>
             </div>
@@ -333,7 +335,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                         <th>Postal</th>
                         <th>ASN & Organization</th>
                         <th>Timezone</th>
-                        <th style="width: 100px; text-align:center;">Action</th>
+                        <th style="width: 100px;">Action</th>
                     </tr>
                 </thead>
                 <tbody id="bulkTableBody"></tbody>
@@ -488,7 +490,7 @@ function executeBulkLookup() {
                     tr.append('<td>' + item.postal + '</td>');
                     tr.append('<td>' + item.asn + ' ' + (item.org !== '-' ? item.org : '') + '</td>');
                     tr.append('<td>' + item.timezone + '</td>');
-                    tr.append('<td style="text-align:center;"><button class="btn-action-view" onclick="inspectSingle(\'' + item.ip + '\')"><i class="icon12 icomoon-icon-location" style="color:#ffffff !important; margin-right:4px;"></i> View</button></td>');
+                    tr.append('<td><button class="btn-action-view" onclick="inspectSingle(\'' + item.ip + '\')"><i class="icon12 icomoon-icon-location" style="color:#ffffff !important; margin-right:4px;"></i> View</button></td>');
                     tbody.append(tr);
                 });
                 $('#bulkResultsArea').show();
