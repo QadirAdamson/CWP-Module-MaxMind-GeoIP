@@ -133,7 +133,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     align-items: center;
     justify-content: center;
     padding: 4px 10px;
-    background: #007bff !important;
+    background: #2f80ed !important;
     color: #ffffff !important;
     border: none;
     border-radius: 4px;
@@ -147,7 +147,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     margin-right: 4px;
 }
 .btn-action-view:hover {
-    background: #0056b3 !important;
+    background: #1b5fc0 !important;
     color: #ffffff !important;
 }
 .nav-tab-link {
@@ -159,7 +159,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
     cursor: pointer;
 }
 .nav-tab-link.active {
-    background: #007bff !important;
+    background: #2f80ed !important;
     color: #fff !important;
 }
 .nav-tab-link.active i {
@@ -238,7 +238,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                        placeholder="Enter IPv4 or IPv6" 
                        value="<?= htmlspecialchars($initial_ip) ?>" style="font-size: 15px; font-weight: bold; height:42px;">
                 <span class="input-group-btn">
-                    <button class="btn btn-primary btn-lg" type="submit" id="btnLookup" style="background:#007bff; border-color:#007bff; height:42px; font-weight:bold; padding:0 22px;">
+                    <button class="btn btn-primary btn-lg" type="submit" id="btnLookup" style="background:#2f80ed; border-color:#2f80ed; height:42px; font-weight:bold; padding:0 22px;">
                         Lookup Details
                     </button>
                 </span>
@@ -288,7 +288,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                         <div style="margin: 0 0 8px; font-size:12px; font-weight: 700; color:#17283a; display: flex; align-items: center; justify-content: space-between;">
                             <span><i class="icon16 icomoon-icon-location" style="color: #2f80ed; margin-right: 5px;"></i> Geographic Location</span>
                             <span style="display:inline-flex; align-items:center; gap:8px;">
-                                <a id="googleMapsLink" href="#" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px;">
+                                <a id="googleMapsLink" href="#" target="_blank" rel="noopener noreferrer" style="color: #2f80ed; text-decoration: none; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px;">
                                     <i class="icon12 icomoon-icon-new-tab"></i> Google Maps
                                 </a>
                                 <small style="color: #64748b; font-weight: normal; font-size: 11px;">OpenStreetMap</small>
@@ -314,7 +314,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
         <p style="color: #6c757d; font-size: 13px;">Enter a list of IP addresses (one IP per line) to analyze together:</p>
         <textarea id="bulk_ips" class="form-control" rows="5" placeholder="8.8.8.8&#10;1.1.1.1&#10;2001:4860:4860::8888&#10;2606:4700:4700::1111" style="font-family:monospace; font-size:13px; margin-bottom:15px;"></textarea>
         <div>
-            <button class="btn btn-primary" type="button" onclick="executeBulkLookup()" style="background:#007bff; border-color:#007bff; font-weight:bold; padding:8px 20px;">
+            <button class="btn btn-primary" type="button" onclick="executeBulkLookup()" style="background:#2f80ed; border-color:#2f80ed; font-weight:bold; padding:8px 20px;">
                 Run Bulk Lookup
             </button>
         </div>
@@ -417,7 +417,7 @@ function executeLookup() {
                 
                 if (d.latitude && d.longitude) {
                     var gmapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(d.latitude + ',' + d.longitude);
-                    var coordsHtml = d.latitude + ', ' + d.longitude + ' <a href="' + gmapsUrl + '" target="_blank" rel="noopener noreferrer" style="margin-left:6px; color:#007bff; text-decoration:none; font-size:11px; font-weight:600;"><i class="icon12 icomoon-icon-new-tab"></i> Google Maps</a>';
+                    var coordsHtml = d.latitude + ', ' + d.longitude + ' <a href="' + gmapsUrl + '" target="_blank" rel="noopener noreferrer" style="margin-left:6px; color:#2f80ed; text-decoration:none; font-size:11px; font-weight:600;"><i class="icon12 icomoon-icon-new-tab"></i> Google Maps</a>';
                     $('#res_coords').html(coordsHtml);
                     $('#googleMapsLink').attr('href', gmapsUrl).show();
                     $('#lookupResult').show();
