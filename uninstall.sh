@@ -25,7 +25,7 @@ echo -e "\n${YELLOW}1. Removing module files...${NC}"
 chattr -i "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php" 2>/dev/null || true
 chattr -i "/usr/local/cwpsrv/htdocs/admin/admin" 2>/dev/null || true
 rm -f "$CWP_DIR/include/geoip_menu.php"
-rm -f "$CWP_DIR/modules/geoip.php"
+rm -f "$CWP_DIR/modules/maxmind-geoip.php"
 rm -f "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php"
 rm -rf "$CWP_DIR/modules/geoip_lib"
 rm -rf "/usr/share/MaxMindGeoIP"

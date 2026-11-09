@@ -44,7 +44,7 @@ $(document).ready(function() {
     // 2. Prepend MaxMind GeoIP item as the FIRST element inside the Developer submenu
     if (!$("#mn-geoip-sub").length) {
         var geoipItem = '<li id="mn-geoip-sub">'
-            + '<a href="index.php?module=geoip">'
+            + '<a href="index.php?module=maxmind-geoip">'
             + '<span class="icon16 icomoon-icon-earth" style="color: #2f80ed !important; margin-right: 6px;"></span>'
             + '<span class="txt">MaxMind GeoIP</span>'
             + '</a>'
@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
 
     // 3. Highlight and keep Developer menu expanded when on GeoIP module
-    if (window.location.search.indexOf('module=geoip') !== -1 || window.location.href.indexOf('module=geoip') !== -1) {
+    if (window.location.search.indexOf('module=maxmind-geoip') !== -1 || window.location.href.indexOf('module=maxmind-geoip') !== -1) {
         if ($developerSub.length) {
             $developerSub.addClass("show").css("display", "block");
         }

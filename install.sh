@@ -51,16 +51,16 @@ echo -e "\n${YELLOW}[2/5] Deploying MaxMind GeoIP module files to CWP...${NC}"
 chattr -i "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php" 2>/dev/null || true
 chattr -i "/usr/local/cwpsrv/htdocs/admin/admin" 2>/dev/null || true
 
-if [ -f "$SCRIPT_DIR/upload/admin/modules/geoip.php" ]; then
+if [ -f "$SCRIPT_DIR/upload/admin/modules/maxmind-geoip.php" ]; then
     cp -rf "$SCRIPT_DIR/upload/admin/include/geoip_menu.php" "$CWP_DIR/include/"
-    cp -rf "$SCRIPT_DIR/upload/admin/modules/geoip.php" "$CWP_DIR/modules/"
+    cp -rf "$SCRIPT_DIR/upload/admin/modules/maxmind-geoip.php" "$CWP_DIR/modules/"
     cp -rf "$SCRIPT_DIR/upload/admin/modules/geoip_ajax.php" "/usr/local/cwpsrv/htdocs/admin/admin/"
     cp -rf "$SCRIPT_DIR/upload/admin/modules/geoip_lib/update_geoip.sh" "$CWP_DIR/modules/geoip_lib/"
     cp -rf "$SCRIPT_DIR/upload/share/MaxMindGeoIP/maxmind_geoip.php" "$MAXMIND_SHARE_DIR/maxmind_geoip.php"
 else
     echo -e "${BLUE}Fetching files directly from GitHub repository...${NC}"
     curl -fsSL "$REPO_RAW/upload/admin/include/geoip_menu.php" -o "$CWP_DIR/include/geoip_menu.php"
-    curl -fsSL "$REPO_RAW/upload/admin/modules/geoip.php" -o "$CWP_DIR/modules/geoip.php"
+    curl -fsSL "$REPO_RAW/upload/admin/modules/maxmind-geoip.php" -o "$CWP_DIR/modules/maxmind-geoip.php"
     curl -fsSL "$REPO_RAW/upload/admin/modules/geoip_ajax.php" -o "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php"
     curl -fsSL "$REPO_RAW/upload/admin/modules/geoip_lib/update_geoip.sh" -o "$CWP_DIR/modules/geoip_lib/update_geoip.sh"
     curl -fsSL "$REPO_RAW/upload/share/MaxMindGeoIP/maxmind_geoip.php" -o "$MAXMIND_SHARE_DIR/maxmind_geoip.php"
@@ -74,8 +74,8 @@ fi
 ln -sf "$GEOIP_DB_DIR/geoip2.phar" "$MAXMIND_SHARE_DIR/geoip2.phar" 2>/dev/null || true
 
 chmod +x "$CWP_DIR/modules/geoip_lib/update_geoip.sh"
-chown -R cwpsrv:cwpsrv "$CWP_DIR/include/geoip_menu.php" "$CWP_DIR/modules/geoip.php" "$CWP_DIR/modules/geoip_lib" "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php"
-chmod 644 "$CWP_DIR/include/geoip_menu.php" "$CWP_DIR/modules/geoip.php" "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php"
+chown -R cwpsrv:cwpsrv "$CWP_DIR/include/geoip_menu.php" "$CWP_DIR/modules/maxmind-geoip.php" "$CWP_DIR/modules/geoip_lib" "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php"
+chmod 644 "$CWP_DIR/include/geoip_menu.php" "$CWP_DIR/modules/maxmind-geoip.php" "/usr/local/cwpsrv/htdocs/admin/admin/geoip_ajax.php"
 chmod 644 "$MAXMIND_SHARE_DIR/maxmind_geoip.php" "$GEOIP_DB_DIR/geoip2.phar" 2>/dev/null || true
 chmod 755 "$GEOIP_DB_DIR" "$MAXMIND_SHARE_DIR"
 chmod -R 755 "$CWP_DIR/modules/geoip_lib"
@@ -112,5 +112,5 @@ echo -e "\n${GREEN}======================================================${NC}"
 echo -e "${GREEN}  MaxMind GeoIP Module Installed Successfully!        ${NC}"
 echo -e "${GREEN}======================================================${NC}"
 echo -e "Access the module directly in your CWP Admin Panel:"
-echo -e "👉 ${BLUE}https://YOUR_SERVER_IP:2031/admin/index.php?module=geoip${NC}"
+echo -e "👉 ${BLUE}https://YOUR_SERVER_IP:2031/admin/index.php?module=maxmind-geoip${NC}"
 echo -e "Or find ${YELLOW}'Developer -> MaxMind GeoIP'${NC} under the left navigation menu."
