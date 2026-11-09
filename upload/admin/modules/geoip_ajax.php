@@ -6,6 +6,26 @@
 
 header('Content-Type: application/json; charset=utf-8');
 
+// Authenticate via CWP Admin Session
+if (session_status() === PHP_SESSION_NONE) {
+    if (is_dir('/root/.cwp_sessions')) {
+        session_save_path('/root/.cwp_sessions');
+    }
+    foreach ($_COOKIE as $k => $v) {
+        if (strpos($k, 'cwpsrv-') === 0 || $k === 'PHPSESSID') {
+            session_name($k);
+            break;
+        }
+    }
+    @session_start();
+}
+
+if (empty($_SESSION['username']) || empty($_SESSION['logged'])) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Unauthorized: Valid CWP admin session required.']);
+    exit;
+}
+
 $default_db_dir = '/usr/share/GeoIP';
 
 function get_db_path($dir, $types = ['City', 'Country', 'ASN']) {

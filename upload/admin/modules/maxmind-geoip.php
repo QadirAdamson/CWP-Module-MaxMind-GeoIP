@@ -4,6 +4,11 @@
  * High-Performance MMDB Lookup & PHP Integration Guide
  */
 
+if (!isset($include_path)) {
+    echo "Invalid Access";
+    exit();
+}
+
 $default_db_dir = '/usr/share/GeoIP';
 
 function get_db_path($dir, $types = ['City', 'Country', 'ASN']) {
