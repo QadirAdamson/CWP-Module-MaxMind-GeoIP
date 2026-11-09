@@ -1,17 +1,17 @@
 # MaxMind GeoIP Module for Control Web Panel (CWP)
 
-A high-performance, native MaxMind GeoLite2 (`.mmdb`) IP lookup and geolocation module designed for [Control Web Panel (CWP)](https://control-webpanel.com/).
+A native MaxMind GeoLite2 IP lookup and geolocation module designed for [Control Web Panel (CWP)](https://control-webpanel.com/).
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-- **Local MMDB Engine**: Query local `.mmdb` binary databases via native `mmdblookup` with zero external API rate limits.
-- **Deep IP Geolocation**: Inspect country, flag, city, region, postal code, timezone, ASN, organization, and coordinates.
-- **Interactive Map**: Embedded OpenStreetMap preview with direct coordinates navigation links.
-- **Bulk IP Lookup**: Query up to 100 IPv4 and IPv6 addresses simultaneously in a responsive data table.
-- **Server-Wide PHP Integration**: Seamless `maxmind_geoip($ip)` helper function accessible to all hosted websites and applications.
-- **Automated Database Updates**: One-click updates for City, Country, and ASN databases directly from the admin panel.
+- **Local Geolocation**: Perform fast local IP lookups without external API limits or extra costs.
+- **Comprehensive IP Data**: View country, city, postal code, timezone, ISP, and coordinates.
+- **Interactive Map**: Preview locations directly on an embedded map with navigation links.
+- **Bulk IP Lookup**: Analyze multiple IPv4 and IPv6 addresses at once in a searchable table.
+- **Server-Wide PHP Support**: Access geolocation functions in any website hosted on your server.
+- **Database Updates**: Easily update geolocation databases directly from the panel.
 
 ---
 
