@@ -31,7 +31,7 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 GEOIP_DB_DIR="/usr/share/GeoIP"
 MAXMIND_SHARE_DIR="/usr/share/MaxMindGeoIP"
-REPO_RAW="https://raw.githubusercontent.com/QadirAdamson/CWP_Module-MaxMind_GeoIP/main"
+REPO_RAW="https://raw.githubusercontent.com/QadirAdamson/CWP-Module-MaxMind-GeoIP/main"
 
 echo -e "\n${YELLOW}[1/5] Preparing directories and dependencies...${NC}"
 mkdir -p "$GEOIP_DB_DIR"

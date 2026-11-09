@@ -20,7 +20,7 @@ A native MaxMind GeoLite2 (`.mmdb`) IP lookup and geolocation module designed fo
 Run on your CWP server as `root`:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/QadirAdamson/CWP_Module-MaxMind_GeoIP/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/QadirAdamson/CWP-Module-MaxMind-GeoIP/main/install.sh | bash
 ```
 
 Access in CWP Admin Panel: 👉 **Developer → MaxMind GeoIP**
@@ -40,7 +40,7 @@ $geoip = maxmind_geoip('8.8.8.8');
 ## 🗑️ Uninstallation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/QadirAdamson/CWP_Module-MaxMind_GeoIP/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/QadirAdamson/CWP-Module-MaxMind-GeoIP/main/uninstall.sh | bash
 ```
 
 ---
