@@ -4,25 +4,14 @@ A high-performance, native MaxMind GeoLite2 (`.mmdb`) IP lookup and geolocation 
 
 ---
 
-## 📸 Screenshots
-
-### Single IP Geolocation with Interactive Map
-![MaxMind GeoIP Single IP Lookup](docs/screenshots/maxmind_geoip_lookup.png)
-
-### Bulk IP Lookup (Up to 100 IPs)
-![MaxMind GeoIP Bulk Lookup](docs/screenshots/maxmind_geoip_bulk.png)
-
----
-
 ## ✨ Key Features
 
-- **🚀 Microsecond MMDB Engine**: Queries local `.mmdb` binary databases via native `mmdblookup` in microseconds with zero external API rate limits or recurring costs.
-- **🔍 Deep IP Geolocation**: Inspect Country & Flag, City & Subdivision / Region, Postal Code, Timezone, ASN & ISP Organization, and exact Coordinates.
-- **🗺️ Interactive Map & Direct Directions**: Dynamic embedded map preview via OpenStreetMap and direct 1-click navigation link to Google Maps.
-- **📋 Bulk IP Lookup**: Analyze up to 100 IPv4 / IPv6 addresses simultaneously in a responsive, left-aligned data table with individual inspection.
-- **⚡ Server-Wide PHP Integration**: Seamless single-function integration (`maxmind_geoip($ip)`) available to every website and script hosted on the server.
-- **🔄 1-Click Database Updates**: Update City, Country, and ASN databases directly from the panel header with `Last Updated` status indicators.
-- **🎨 Standardized CWP Design**: Action buttons in CWP blue (`#2f80ed`) and uniform left-aligned tables.
+- **Local MMDB Engine**: Query local `.mmdb` binary databases via native `mmdblookup` with zero external API rate limits.
+- **Deep IP Geolocation**: Inspect country, flag, city, region, postal code, timezone, ASN, organization, and coordinates.
+- **Interactive Map**: Embedded OpenStreetMap preview with direct coordinates navigation links.
+- **Bulk IP Lookup**: Query up to 100 IPv4 and IPv6 addresses simultaneously in a responsive data table.
+- **Server-Wide PHP Integration**: Seamless `maxmind_geoip($ip)` helper function accessible to all hosted websites and applications.
+- **Automated Database Updates**: One-click updates for City, Country, and ASN databases directly from the admin panel.
 
 ---
 
