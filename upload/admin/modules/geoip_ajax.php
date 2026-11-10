@@ -1,7 +1,6 @@
 <?php
 /**
- * Dedicated Clean JSON AJAX handler for CWP MaxMind GeoIP Module
- * Directly accessed within CWP authenticated session scope: ./geoip_ajax.php
+ * Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
  */
 
 header('Content-Type: application/json; charset=utf-8');

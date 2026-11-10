@@ -1,7 +1,6 @@
 <?php
 /**
- * MaxMind GeoIP Module for Control Web Panel (CWP)
- * High-Performance MMDB Lookup & PHP Integration Guide
+ * Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
  */
 
 if (!isset($include_path)) {
