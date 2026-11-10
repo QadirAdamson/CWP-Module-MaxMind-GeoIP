@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# CWP MaxMind GeoIP Module Uninstaller
+# Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
 # ==============================================================================
 
 set -e

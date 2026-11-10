@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# CWP MaxMind GeoIP Module Installer
-# Compatible with CentOS 7/8/9 Stream, AlmaLinux 8/9/10, Rocky Linux & RHEL
-# Control Web Panel (CWP / CWP7)
+# Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
 # ==============================================================================
 
 set -e

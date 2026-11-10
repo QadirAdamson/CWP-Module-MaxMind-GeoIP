@@ -1,11 +1,6 @@
 <?php
 /**
- * Global MaxMind GeoIP Helper for Control Web Panel (CWP)
- * Location: /usr/share/MaxMindGeoIP/maxmind_geoip.php
- *
- * Usage in any PHP project on this server:
- *   require_once '/usr/share/MaxMindGeoIP/maxmind_geoip.php';
- *   $geoip = maxmind_geoip('8.8.8.8');
+ * Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
  */
 
 if (!function_exists('maxmind_geoip')) {

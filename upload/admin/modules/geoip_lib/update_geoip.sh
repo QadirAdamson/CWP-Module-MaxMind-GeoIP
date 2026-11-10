@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# MaxMind GeoLite2 MMDB Updater for CWP
-# Updates GeoLite2-City, GeoLite2-Country and GeoLite2-ASN databases
+# Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
 # ==============================================================================
 
 GEOIP_DIR="/usr/share/GeoIP"
