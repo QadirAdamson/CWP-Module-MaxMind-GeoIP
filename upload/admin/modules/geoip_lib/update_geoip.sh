@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
+# https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
 # ==============================================================================
 
 GEOIP_DIR="/usr/share/GeoIP"

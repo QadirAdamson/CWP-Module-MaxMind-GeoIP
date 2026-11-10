@@ -1,6 +1,6 @@
 <?php
 /**
- * Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
+ * https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
  */
 
 if (!isset($include_path)) {

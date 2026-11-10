@@ -1,6 +1,6 @@
 <?php
 /**
- * Github: https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
+ * https://github.com/QadirAdamson/CWP-Module-MaxMind-GeoIP
  */
 
 header('Content-Type: application/json; charset=utf-8');
