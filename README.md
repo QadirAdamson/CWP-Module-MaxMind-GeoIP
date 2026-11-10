@@ -4,6 +4,10 @@ MaxMind GeoLite2 IP lookup and geolocation module for [Control Web Panel (CWP)](
 
 ---
 
+![Screenshot](screenshot.png)
+
+---
+
 ## Features
 
 - Local IP geolocation lookups
