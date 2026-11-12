@@ -18,6 +18,12 @@ MaxMind GeoLite2 IP lookup and geolocation module for [Control Web Panel (CWP)](
 
 ---
 
+## Database
+
+This module uses free [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) databases (`City`, `Country`, `ASN`) in `.mmdb` format and is fully compatible with commercial MaxMind GeoIP2 databases. Updates are performed automatically without requiring an API key.
+
+---
+
 ## Installation
 
 Run on your CWP server as `root`:
