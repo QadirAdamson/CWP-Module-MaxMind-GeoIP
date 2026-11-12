@@ -188,7 +188,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                 </h3>
                 <span style="display:inline-flex; align-items:center; gap:5px; background:#f4f6f9; border:1px solid #e2e8f0; border-radius:4px; padding:4px 10px; font-size:12px; color:#64748b;">
                     <i class="icon12 icomoon-icon-clock" style="color:#64748b;"></i>
-                    <span>Last Updated: <strong style="color:#334155; font-weight:600;"><?= htmlspecialchars($last_updated_str) ?></strong></span>
+                    <span>GeoLite2 DBs Updated on <strong style="color:#334155; font-weight:600;"><?= htmlspecialchars($last_updated_str) ?></strong></span>
                 </span>
             </div>
             <div>
