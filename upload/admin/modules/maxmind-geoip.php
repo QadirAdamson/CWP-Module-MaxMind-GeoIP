@@ -259,6 +259,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
             <div class="row">
                 
                 <div class="col-md-6 col-sm-12">
+                    <div class="table-responsive" style="overflow-x:auto; width:100%;">
                     <table class="pdns-table" style="margin-bottom:0;">
                         <tbody>
                             <tr>
@@ -287,6 +288,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
 
                 <div class="col-md-6 col-sm-12">
@@ -330,6 +332,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
         </div>
 
         <div id="bulkResultsArea" style="margin-top: 25px; display: none;">
+            <div class="table-responsive" style="overflow-x:auto; width:100%;">
             <table class="pdns-table">
                 <thead>
                     <tr>
@@ -344,6 +347,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                 </thead>
                 <tbody id="bulkTableBody"></tbody>
             </table>
+            </div>
         </div>
     </div>
 </div>
