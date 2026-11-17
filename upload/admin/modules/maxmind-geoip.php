@@ -297,7 +297,7 @@ $initial_ip = !empty($client_ipv4) ? $client_ipv4 : $client_ipv6;
                                 <a id="googleMapsLink" href="#" target="_blank" rel="noopener noreferrer" style="color: #2f80ed; text-decoration: none; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px;">
                                     <i class="icon12 icomoon-icon-new-tab"></i> Google Maps
                                 </a>
-                                <small style="color: #64748b; font-weight: normal; font-size: 11px;">OpenStreetMap</small>
+                                <small style="color: #64748b; font-weight: normal; font-size: 11px;">CARTO / OpenStreetMap</small>
                             </span>
                         </div>
                         <div id="geoMap"></div>
@@ -452,9 +452,10 @@ function initOrUpdateMap(lat, lng, popupText) {
     setTimeout(function() {
         if (!mapInstance) {
             mapInstance = L.map('geoMap').setView([lat, lng], 10);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: '© OpenStreetMap contributors'
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                maxZoom: 19,
+                subdomains: 'abcd',
+                attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">CARTO</a>'
             }).addTo(mapInstance);
             mapMarker = L.marker([lat, lng]).addTo(mapInstance);
         } else {
